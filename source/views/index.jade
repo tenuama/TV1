@@ -1,0 +1,81 @@
+doctype html
+- var title = 'People'
+
+block vars
+
+html.no-js(lang="")
+  head
+    meta(charset="utf-8")
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui, user-scalable=no")
+    title #{title}
+    link(rel="stylesheet", href="styles/vendor.css")
+    link(rel="stylesheet", href="styles/main.css")
+    link(rel="icon" type="image/png" href="images/favicon.png")
+  body
+    header.header.static(role="header")
+    section.people
+      div.people__container
+        table.people__table
+          caption.people__title People
+          tr
+            th
+            th Ideas
+            th Following
+            th Followers
+          tr.people__item
+            td 
+              div(style="background-image: url('/images/photos/1.png');").people__photo
+              input(type="checkbox" name="follow" id="JohnAdams" value="JohnAdams").people__name
+              label(for="JohnAdams") John Adams
+              span.people__rating 102
+            td 0
+            td 50
+            td 0
+          tr.people__item
+            td 
+              div(style="background-image: url('/images/photos/2.png');").people__photo
+              input(type="checkbox" name="follow" id="KevinMalcolm" value="KevinMalcolm").people__name
+              label(for="KevinMalcolm") Kevin Malcolm
+              span.people__rating 1472
+            td 20
+            td 19
+            td 26
+          tr.people__item
+            td 
+              div(style="background-image: url('/images/photos/3.png');").people__photo
+              input(type="checkbox" name="follow" id="JamesMadison" value="JamesMadison").people__name
+              label(for="JamesMadison") James Madison
+              span.people__rating 32
+            td 0
+            td 2
+            td 0
+          tr.people__item.people__item--friend
+            td 
+              div(style="background-image: url('/images/photos/4.png');").people__photo
+              input(type="checkbox" name="follow" id="JamesMonroe" value="JamesMonroe" checked="checked").people__name
+              label(for="JamesMonroe") James Monroe
+              span.people__rating 3086
+            td 53
+            td 1059
+            td 45
+          tr.people__item
+            td 
+              div().people__photo
+              input(type="checkbox" name="follow" id="JamesMadison" value="JamesMadison").people__name
+              label(for="JamesMadison") James Madison
+              span.people__rating 32
+            td 0
+            td 2
+            td 0
+          tr.people__item.people__item--friend
+            td 
+              div(style="background-image: url('/images/photos/1.png');").people__photo
+              input(type="checkbox" name="follow" id="JamesMonroe" value="JamesMonroe" checked="checked").people__name
+              label(for="JamesMonroe") James Monroe
+              span.people__rating 3086
+            td 53
+            td 1059
+            td 45
+        a.people__show-more(href="#") Show more
+    footer.footer

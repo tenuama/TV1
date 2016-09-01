@@ -1,0 +1,26 @@
+{
+  "name": "TW_test",
+  "version": "0.0.1",
+  "description": "TW_test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tenuama",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-connect": "^3.1.1"
+  },
+  "dependencies": {
+    "normalize-scss": "^3.0.3",
+    "jquery": "^2.2.2"
+  }
+}

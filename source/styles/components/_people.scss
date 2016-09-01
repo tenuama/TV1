@@ -1,0 +1,207 @@
+.people {
+
+    background: $blue;
+    color: #5a5a5a;
+    padding: 20px 0 70px;
+    text-align: center;
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        display: inline-block;
+        margin: 0;
+        color: #5a5a5a;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 22px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        text-align: left;
+
+        &::before {
+            content: url('../images/people.png');
+            display: inline-block;
+            margin-right: 5px;
+            line-height: 22px;
+            vertical-align: middle;
+        }
+    }
+
+    &__table {
+
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        text-align: left;
+        
+        
+        tr th,
+        tr td {
+            /*border-right: 1px solid $grey;*/
+            border-bottom: 1px solid #f1f1f1;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 18px;
+
+            &:first-child {
+                border-left: 1px solid $grey;
+            }
+
+            &:last-child {
+               border-right: 1px solid $grey;
+            }
+        }
+
+        tr:last-child td  {
+            border-bottom: 1px solid $grey;
+        }
+
+        tr th {
+            background: $blue2;
+            border-top: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            text-align: left;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        tr:nth-child(even) {
+            background: #fbfbfb;
+        }
+
+        tr:nth-child(odd) {
+            background: #fff;
+        }
+
+        tr:first-child th:first-child {
+          border-top-left-radius: 4px;
+        }
+
+        tr:first-child th:last-child {
+          border-top-right-radius: 4px;
+        }
+
+        tr:last-child td:first-child {
+          border-bottom-left-radius: 4px;
+        }
+
+        tr:last-child td:last-child {
+          border-bottom-right-radius: 4px;
+        }
+
+        tr th:nth-child(2),
+        tr th:nth-child(3),
+        tr th:nth-child(4),
+        tr td:nth-child(2),
+        tr td:nth-child(3),
+        tr td:nth-child(4) {
+            text-align: right;
+            padding-right: 25px;
+        }
+    }
+
+    &__rating {
+
+        display: block;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+        color: #5a5a5a;
+
+        &::before {
+            content: url('../images/rating.png');
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+
+    &__name {
+        display: none;
+
+        + label {
+            color: #2c76c7;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 25px;
+            vertical-align: middle;
+            cursor: pointer;
+
+            &::after {
+                content: url('../images/plus.png');
+                display: inline-block;
+                margin-left: 10px;
+                line-height: 25px;
+                vertical-align: middle;
+                border-radius: 100%;
+                /*transition: background .5s ease;*/
+                min-width: 61px;
+                background: transparent;
+            }  
+
+            &:hover {
+                &::after {
+                    content: 'Follow';
+                    background: #a4c574;
+                    color: #fff;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding: 0 10px;
+                    border-radius: 10px;
+                    margin-bottom: 5px;
+                    min-width: initial;
+                }
+            }
+        }
+
+        &:checked + label {
+            &:after {
+                content: url('../images/yes.png');
+                min-width: 74px;
+            }
+
+            &:hover:after {
+                content: 'Unfollow';
+                background: #ff6b5a;
+                min-width: initial;
+            }
+        }
+    }
+
+    &__item {
+
+        &--friend .people__name::after {
+            content: url('../images/yes.png');
+        }
+    }
+
+    &__photo {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-right: 10px;
+        background: url('../images/photos/defult.png') no-repeat center/cover;
+        border-radius: 2px;
+    }
+
+    &__show-more {
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #5a5a5a;
+        background: #fff;
+        font-weight: bold;
+        display: inline-block;
+        padding: 10px 55px;
+        border: 1px solid $grey;
+        border-top: 1px dashed $grey;
+        margin-top: -1px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
