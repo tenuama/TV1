@@ -1,7 +1,6 @@
 .people {
-
     background: $blue;
-    color: #5a5a5a;
+    color: $textBlack;
     padding: 20px 0 70px;
     text-align: center;
 
@@ -13,10 +12,11 @@
     &__title {
         display: inline-block;
         margin: 0;
-        color: #5a5a5a;
+        color: $textBlack;
         font-size: 18px;
-        font-weight: bold;
-        line-height: 22px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0;
         vertical-align: middle;
         text-transform: uppercase;
         text-align: left;
@@ -31,20 +31,19 @@
     }
 
     &__table {
-
         width: 100%;
         border-collapse: separate;
         border-spacing: 0;
         text-align: left;
         
         
-        tr th,
-        tr td {
-            /*border-right: 1px solid $grey;*/
+        th,
+        td {
             border-bottom: 1px solid #f1f1f1;
-            padding: 5px;
-            font-weight: bold;
+            padding: 6px 7px;
+            font-weight: 700;
             font-size: 18px;
+            line-height: 20px;
 
             &:first-child {
                 border-left: 1px solid $grey;
@@ -59,13 +58,14 @@
             border-bottom: 1px solid $grey;
         }
 
-        tr th {
+        th {
             background: $blue2;
             border-top: 1px solid $grey;
             border-bottom: 1px solid $grey;
             text-align: left;
             font-weight: 300;
             font-size: 16px;
+            line-height: 18px;
         }
 
         tr:nth-child(even) {
@@ -73,7 +73,7 @@
         }
 
         tr:nth-child(odd) {
-            background: #fff;
+            background: $white;
         }
 
         tr:first-child th:first-child {
@@ -92,24 +92,24 @@
           border-bottom-right-radius: 4px;
         }
 
-        tr th:nth-child(2),
-        tr th:nth-child(3),
-        tr th:nth-child(4),
-        tr td:nth-child(2),
-        tr td:nth-child(3),
-        tr td:nth-child(4) {
+        th:first-child,
+        td:first-child {
+            width: 58%;
+        }
+
+        th:not(:first-child),
+        td:not(:first-child) {
             text-align: right;
             padding-right: 25px;
         }
     }
 
     &__rating {
-
         display: block;
         font-size: 18px;
         line-height: 25px;
-        font-weight: bold;
-        color: #5a5a5a;
+        font-weight: 700;
+        color: $textBlack;
 
         &::before {
             content: url('../images/rating.png');
@@ -118,84 +118,72 @@
         }
     }
 
-    &__name {
+    &__button {
         display: none;
-
-        + label {
-            color: #2c76c7;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 25px;
-            vertical-align: middle;
-            cursor: pointer;
-
-            &::after {
-                content: url('../images/plus.png');
-                display: inline-block;
-                margin-left: 10px;
-                line-height: 25px;
-                vertical-align: middle;
-                border-radius: 100%;
-                /*transition: background .5s ease;*/
-                min-width: 61px;
-                background: transparent;
-            }  
-
-            &:hover {
-                &::after {
-                    content: 'Follow';
-                    background: #a4c574;
-                    color: #fff;
-                    font-weight: normal;
-                    font-size: 14px;
-                    line-height: 20px;
-                    padding: 0 10px;
-                    border-radius: 10px;
-                    margin-bottom: 5px;
-                    min-width: initial;
-                }
-            }
-        }
-
-        &:checked + label {
-            &:after {
-                content: url('../images/yes.png');
-                min-width: 74px;
-            }
-
-            &:hover:after {
-                content: 'Unfollow';
-                background: #ff6b5a;
-                min-width: initial;
-            }
-        }
     }
 
-    &__item {
+    &__name {
+        color: #2c76c7;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        vertical-align: middle;
+    }
 
-        &--friend .people__name::after {
+    &__button + label {
+        cursor: pointer;
+        margin-left: 5px;
+
+        &::after {
+            content: url('../images/plus.png');
+            display: inline-block;
+            line-height: 14px;
+            vertical-align: middle;
+            border-radius: 100%;
+            background: transparent;
+            transition: background 1s easeOutQuart;
+        }  
+    }
+
+    &__button + label:hover::after {
+        content: 'Follow';
+        background: #a4c574;
+        color: $white;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+
+    &__button:checked + label {
+
+        &::after {
             content: url('../images/yes.png');
+        }
+
+        &:hover::after {
+            content: 'Unfollow';
+            background: #ff6b5a;
         }
     }
 
     &__photo {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         float: left;
         margin-right: 10px;
         background: url('../images/photos/defult.png') no-repeat center/cover;
         border-radius: 2px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__show-more {
-        text-align: center;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #5a5a5a;
-        background: #fff;
-        font-weight: bold;
         display: inline-block;
         padding: 10px 55px;
         border: 1px solid $grey;
@@ -203,5 +191,12 @@
         margin-top: -1px;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $textBlack;
+        background: $white;
+        font-weight: 700;
+        font-size: 10px;
     }
 }

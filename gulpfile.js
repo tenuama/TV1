@@ -7,11 +7,11 @@ var properties = {
 }
 
 var plugins = {
-  js: [
-    'node_modules/jquery/dist/jquery.min.js'
-  ],
+  // js: [
+  //   'node_modules/jquery/dist/jquery.min.js'
+  // ],
   css: [
-    'node_modules/normalize-scss/normalize.css'
+    'node_modules/normalize.css/normalize.css'
   ]
 }
 
@@ -47,9 +47,9 @@ gulp.task('vendor', function () {
 	gulp.src(plugins.css)
 	  .pipe(concat('vendor.css'))
 	  .pipe(gulp.dest(properties.folders.build + '/styles/'));
-	gulp.src(plugins.js)
-    .pipe(concat('vendor.js'))
-    .pipe(gulp.dest(properties.folders.build + '/scripts/'));
+	// gulp.src(plugins.js)
+ //    .pipe(concat('vendor.js'))
+ //    .pipe(gulp.dest(properties.folders.build + '/scripts/'));
 });
 
 gulp.task('jade', function() {
@@ -89,10 +89,10 @@ gulp.task('watch', function() {
 	watch(properties.folders.src + '/styles/**/*.scss', function() {
     gulp.start('sass');
 	});
-	watch(properties.folders.src + '/scripts/**/*.js', function() {
-    gulp.start('scripts');
-	});
+	// watch(properties.folders.src + '/scripts/**/*.js', function() {
+ //    gulp.start('scripts');
+	// });
   gulp.watch(properties.folders.build + '/styles/main.css').on('change', livereload.changed);
 });
 
-gulp.task('default', ['server', 'jade', 'scripts', 'vendor', 'sass', 'watch']);
+gulp.task('default', ['server', 'jade', 'vendor', 'sass', 'watch']);

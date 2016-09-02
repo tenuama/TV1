@@ -3,7 +3,7 @@ doctype html
 
 block vars
 
-html.no-js(lang="")
+html
   head
     meta(charset="utf-8")
     meta(name="description", content="")
@@ -11,7 +11,7 @@ html.no-js(lang="")
     title #{title}
     link(rel="stylesheet", href="styles/vendor.css")
     link(rel="stylesheet", href="styles/main.css")
-    link(rel="icon" type="image/png" href="images/favicon.png")
+    //- link(rel="icon" type="image/png" href="images/favicon.png")
   body
     header.header.static(role="header")
     section.people
@@ -25,57 +25,122 @@ html.no-js(lang="")
             th Followers
           tr.people__item
             td 
-              div(style="background-image: url('/images/photos/1.png');").people__photo
-              input(type="checkbox" name="follow" id="JohnAdams" value="JohnAdams").people__name
-              label(for="JohnAdams") John Adams
+              a(href="#").people__photo
+                img(src="./images/photos/1.png")
+              a(href="#").people__name John Adams
+              input(type="checkbox" name="follow" id="JohnAdams" value="JohnAdams").people__button
+              label(for="JohnAdams") 
               span.people__rating 102
             td 0
             td 50
             td 0
           tr.people__item
             td 
-              div(style="background-image: url('/images/photos/2.png');").people__photo
-              input(type="checkbox" name="follow" id="KevinMalcolm" value="KevinMalcolm").people__name
-              label(for="KevinMalcolm") Kevin Malcolm
+              a(href="#").people__photo
+                img(src="./images/photos/2.png")
+              a(href="#").people__name Kevin Malcolm
+              input(type="checkbox" name="follow" id="KevinMalcolm" value="KevinMalcolm").people__button.people__name
+              label(for="KevinMalcolm") 
               span.people__rating 1472
             td 20
             td 19
             td 26
           tr.people__item
             td 
-              div(style="background-image: url('/images/photos/3.png');").people__photo
-              input(type="checkbox" name="follow" id="JamesMadison" value="JamesMadison").people__name
-              label(for="JamesMadison") James Madison
+              a(href="#").people__photo
+                img(src="./images/photos/3.png")
+              a(href="#").people__name James Madison
+              input(type="checkbox" name="follow" id="JamesMadison" value="JamesMadison" checked="checked").people__button
+              label(for="JamesMadison") 
               span.people__rating 32
             td 0
             td 2
             td 0
-          tr.people__item.people__item--friend
+          tr.people__item
             td 
-              div(style="background-image: url('/images/photos/4.png');").people__photo
-              input(type="checkbox" name="follow" id="JamesMonroe" value="JamesMonroe" checked="checked").people__name
-              label(for="JamesMonroe") James Monroe
+              a(href="#").people__photo
+                img(src="./images/photos/4.png")
+              a(href="#").people__name James Monroe
+              input(type="checkbox" name="follow" id="JamesMonroe" value="JamesMonroe" checked="checked").people__button
+              label(for="JamesMonroe") 
               span.people__rating 3086
             td 53
             td 1059
             td 45
           tr.people__item
             td 
-              div().people__photo
-              input(type="checkbox" name="follow" id="JamesMadison" value="JamesMadison").people__name
-              label(for="JamesMadison") James Madison
+              a(href="#").people__photo
+              a(href="#").people__name Andrew Jackson
+              input(type="checkbox" name="follow" id="AndrewJackson" value="AndrewJackson").people__button
+              label(for="AndrewJackson") 
+              span.people__rating 102
+            td 0
+            td 50
+            td 0
+          tr.people__item
+            td 
+              a(href="#").people__photo
+                img(src="./images/photos/1.png")
+              a(href="#").people__name John Adams
+              input(type="checkbox" name="follow" id="JohnAdams1" value="JohnAdams1").people__button
+              label(for="JohnAdams1") 
+              span.people__rating 102
+            td 0
+            td 50
+            td 0
+          tr.people__item
+            td 
+              a(href="#").people__photo
+                img(src="./images/photos/2.png")
+              a(href="#").people__name Kevin Malcolm
+              input(type="checkbox" name="follow" id="KevinMalcolm1" value="KevinMalcolm1").people__button.people__name
+              label(for="KevinMalcolm1") 
+              span.people__rating 1472
+            td 20
+            td 19
+            td 26
+          tr.people__item
+            td 
+              a(href="#").people__photo
+                img(src="./images/photos/3.png")
+              a(href="#").people__name James Madison
+              input(type="checkbox" name="follow" id="JamesMadison1" value="JamesMadison1" checked="checked").people__button
+              label(for="JamesMadison1") 
               span.people__rating 32
             td 0
             td 2
             td 0
-          tr.people__item.people__item--friend
+          tr.people__item
             td 
-              div(style="background-image: url('/images/photos/1.png');").people__photo
-              input(type="checkbox" name="follow" id="JamesMonroe" value="JamesMonroe" checked="checked").people__name
-              label(for="JamesMonroe") James Monroe
+              a(href="#").people__photo
+                img(src="./images/photos/4.png")
+              a(href="#").people__name James Monroe
+              input(type="checkbox" name="follow" id="JamesMonroe1" value="JamesMonroe1" checked="checked").people__button
+              label(for="JamesMonroe1") 
               span.people__rating 3086
             td 53
             td 1059
             td 45
+          tr.people__item
+            td 
+              a(href="#").people__photo
+              a(href="#").people__name Andrew Jackson
+              input(type="checkbox" name="follow" id="AndrewJackson1" value="AndrewJackson1").people__button
+              label(for="AndrewJackson1") 
+              span.people__rating 102
+            td 0
+            td 50
+            td 0
+          tr.people__item
+            td 
+              a(href="#").people__photo
+                img(src="./images/photos/1.png")
+              a(href="#").people__name John Adams
+              input(type="checkbox" name="follow" id="JohnAdams2" value="JohnAdams2").people__button
+              label(for="JohnAdams2") 
+              span.people__rating 102
+            td 0
+            td 50
+            td 0
         a.people__show-more(href="#") Show more
     footer.footer
