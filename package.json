@@ -1,7 +1,7 @@
 {
-  "name": "TW_test",
+  "name": "TV_test",
   "version": "0.0.1",
-  "description": "TW_test",
+  "description": "TV_test",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
