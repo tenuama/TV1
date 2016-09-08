@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font: 300 14px/1 Helvetica, Arial, sans-serif;
+  letter-spacing: 0.005em; }
+
+.people {
+  background: #f7f9fa;
+  color: #5a5a5a;
+  padding: 20px 0 70px;
+  text-align: center; }
+  .people__container {
+    width: 90%;
+    margin: 0 auto; }
+  .people__title {
+    display: inline-block;
+    margin: 0;
+    color: #5a5a5a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: left; }
+    .people__title::before {
+      content: url("../images/people.png");
+      display: inline-block;
+      margin-right: 5px;
+      line-height: 22px;
+      vertical-align: middle; }
+  .people__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left; }
+    .people__table th,
+    .people__table td {
+      border-bottom: 1px solid #f1f1f1;
+      padding: 6px 7px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px; }
+      .people__table th:first-child,
+      .people__table td:first-child {
+        border-left: 1px solid #bfbfbf; }
+      .people__table th:last-child,
+      .people__table td:last-child {
+        border-right: 1px solid #bfbfbf; }
+    .people__table tr:last-child td {
+      border-bottom: 1px solid #bfbfbf; }
+    .people__table th {
+      background: #ecf0f3;
+      border-top: 1px solid #bfbfbf;
+      border-bottom: 1px solid #bfbfbf;
+      text-align: left;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px; }
+    .people__table tr:nth-child(even) {
+      background: #fbfbfb; }
+    .people__table tr:nth-child(odd) {
+      background: #fff; }
+    .people__table tr:first-child th:first-child {
+      border-top-left-radius: 4px; }
+    .people__table tr:first-child th:last-child {
+      border-top-right-radius: 4px; }
+    .people__table tr:last-child td:first-child {
+      border-bottom-left-radius: 4px; }
+    .people__table tr:last-child td:last-child {
+      border-bottom-right-radius: 4px; }
+    .people__table th:first-child,
+    .people__table td:first-child {
+      width: 58%; }
+    .people__table th:not(:first-child),
+    .people__table td:not(:first-child) {
+      text-align: right;
+      padding-right: 25px; }
+  .people__rating {
+    display: block;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #5a5a5a; }
+    .people__rating::before {
+      content: url("../images/rating.png");
+      display: inline-block;
+      margin-right: 5px; }
+  .people__button {
+    display: none; }
+  .people__name {
+    color: #2c76c7;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    vertical-align: middle; }
+  .people__button + label {
+    cursor: pointer;
+    margin-left: 5px; }
+    .people__button + label::after {
+      content: url("../images/plus.png");
+      display: inline-block;
+      line-height: 14px;
+      vertical-align: middle;
+      border-radius: 100%;
+      background: transparent;
+      transition: background 1s easeOutQuart; }
+  .people__button + label:hover::after {
+    content: 'Follow';
+    background: #a4c574;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 10px;
+    border-radius: 10px; }
+  .people__button:checked + label::after {
+    content: url("../images/yes.png"); }
+  .people__button:checked + label:hover::after {
+    content: 'Unfollow';
+    background: #ff6b5a; }
+  .people__photo {
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-right: 10px;
+    background: url("../images/photos/defult.png") no-repeat center/cover;
+    border-radius: 2px; }
+    .people__photo img {
+      width: 100%;
+      height: 100%; }
+  .people__show-more {
+    display: inline-block;
+    padding: 10px 55px;
+    border: 1px solid #bfbfbf;
+    border-top: 1px dashed #bfbfbf;
+    margin-top: -1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #5a5a5a;
+    background: #fff;
+    font-weight: 700;
+    font-size: 10px; }
+
+/*# sourceMappingURL=main.css.map */
